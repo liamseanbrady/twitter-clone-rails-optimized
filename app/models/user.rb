@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password validations: false
+  has_many :statuses
 
   validates :username, presence: true, length: {minimum: 3}
   validates :email, presence: true, format: { with: /\A[\w\d]+[@][a-z]+.(com|co.uk)\z/, 
