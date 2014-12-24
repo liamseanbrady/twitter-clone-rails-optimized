@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
   validates :username, length: {minimum: 3, message: 'Your username must have more than 2 characters'}
   validates :email, presence: true, format: { with: /\A[\w\d]+[@][a-z]+.(com|co.uk)\z/, 
     message: 'The email address you entered is not valid' }, on: :create
-  validates :password, presence: true, length: {minimum: 8}, on: :create
+  validates :password, length: {minimum: 8}, on: :create
 end
