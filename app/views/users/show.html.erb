@@ -1,1 +1,7 @@
 <%= render 'shared/header', title: "@#{@user.username}" %>
+
+<% @user.statuses.each do |status| %>
+  <ul>
+    <li><%= status.body %> at <%= status.created_at %></li>
+  </ul>
+<% end %>
