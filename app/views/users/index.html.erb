@@ -1,5 +1,4 @@
-<h4>All Users</h4>
-<hr>
+<%= render 'shared/header', title: 'All Users' %>
 
 <% @users.each do |user| %>
   <p><%= link_to "@#{user.username}", user_path(user) %></p>
