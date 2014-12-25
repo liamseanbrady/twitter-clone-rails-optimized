@@ -18,7 +18,7 @@ class StatusesController < ApplicationController
   end
 
   def show
-
+    @status = Status.find(params[:id])
   end
 
   private
