@@ -7,4 +7,5 @@ TwitterCloneRailsOptimized::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :users, only: [:index, :create, :show]
+  resources :statuses, only: [:new, :create, :show]
 end
