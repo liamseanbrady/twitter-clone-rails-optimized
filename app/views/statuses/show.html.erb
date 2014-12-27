@@ -1,0 +1,4 @@
+<%= render 'shared/header', title: 'Showing Status' %>
+
+<p><%= @status.body %></p>
+<p>created by <%= status.creator.username %> at <%= display_datetime(status.created_at) %></p>
